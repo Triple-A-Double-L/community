@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxtjs/seo',
     '@nuxtjs/color-mode',
-    '@primevue/nuxt-module'
+    '@primevue/nuxt-module',
+    '@nuxt/fonts',
+    '@nuxt/scripts'
   ]
 })
