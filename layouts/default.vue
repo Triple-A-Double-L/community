@@ -1,5 +1,12 @@
+<script setup lang="ts">
+import MainNavbar from "~/components/layout/MainNavbar.vue";
+</script>
+
 <template>
   <div>
-    <slot />
+    <MainNavbar />
+    <main>
+      <slot />
+    </main>
   </div>
 </template>
