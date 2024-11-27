@@ -17,6 +17,14 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
   ],
 
+  app: {
+    head: {
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/img/favicon-light.ico" },
+      ],
+    },
+  },
+
   image: {
     format: ["webp", "svg"],
   },

@@ -8,8 +8,6 @@ const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () =>
   queryContent<BlogPost>().find()
 );
-
-console.log(posts.value);
 </script>
 
 <template>

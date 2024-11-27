@@ -16,7 +16,7 @@ const colorMode = useColorMode();
         class="font-bold text-xl flex items-center gap-4 uppercase"
         to="/"
       >
-        <NuxtImg :src="colorMode.value === 'light' ? '/light-logo.svg' : '/dark-logo.svg'" height="48" width="48" />
+        <NuxtImg :src="colorMode.value === 'light' ? '/img/logo-light.svg' : '/img/logo-dark.svg'" height="48" width="48" />
         Community
       </NuxtLink>
       <div class="flex items-center gap-4">
