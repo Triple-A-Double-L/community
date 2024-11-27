@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Button } from "../ui/button";
 import ThemeSelector from "../ui/common/ThemeSelector.vue";
+
+const colorMode = useColorMode();
 </script>
 
 <template>
@@ -14,7 +16,7 @@ import ThemeSelector from "../ui/common/ThemeSelector.vue";
         class="font-bold text-xl flex items-center gap-4 uppercase"
         to="/"
       >
-        <NuxtImg src="/logo.svg" height="48" width="48" />
+        <NuxtImg :src="colorMode.value === 'light' ? '/light-logo.svg' : '/dark-logo.svg'" height="48" width="48" />
         Community
       </NuxtLink>
       <div class="flex items-center gap-4">
