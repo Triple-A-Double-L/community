@@ -12,8 +12,8 @@ const { data: post } = defineProps<Props>();
 
 <template>
   <NuxtLink :to="post._path">
-    <Card class="bg-transparent group flex lg:flex-col">
-      <CardHeader>
+    <Card class="bg-transparent group flex flex-col">
+      <CardHeader class="flex-shrink-0">
         <div
           class="ring-1 ring-gray-200 dark:ring-gray-800 overflow-hidden aspect-[16/9] rounded-lg"
         >
@@ -29,7 +29,7 @@ const { data: post } = defineProps<Props>();
           <Badge>{{ post.badge.label }}</Badge>
         </div>
         <CardTitle
-          class="text-gray-900 dark:text-white text-xl font-semibold truncate group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-200"
+          class="text-gray-900 dark:text-white text-xl font-semibold line-clamp-1 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-200"
           >{{ post.title }}</CardTitle
         >
         <CardDescription

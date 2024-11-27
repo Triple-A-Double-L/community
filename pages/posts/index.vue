@@ -27,7 +27,7 @@ console.log(posts.value);
       </p>
     </div>
     <div
-      class="mt-8 pb-24 flex flex-col lg:grid lg:grid-cols-3 gap-x-8 gap-y-16"
+      class="mt-8 pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
     >
       <PostCard
         v-for="post in posts"
