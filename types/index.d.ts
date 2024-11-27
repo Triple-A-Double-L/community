@@ -7,4 +7,5 @@ export interface BlogPost extends ParsedContent {
   date: string
   image?: HTMLImageElement
   badge?: Badge
+  links?: Link[]
 }

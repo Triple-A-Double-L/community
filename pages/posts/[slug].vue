@@ -77,6 +77,21 @@ const { data: surround } = await useAsyncData(
       <div class="mt-4 text-lg text-gray-500 dark:text-gray-400">
         {{ post?.description }}
       </div>
+      <div v-if="post?.links && post.links.length > 0" class="flex mt-6 gap-4">
+        <NuxtLink
+          v-for="link in post.links"
+          :key="link.url"
+          :to="link.url"
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 group"
+          :target="link.target"
+          >
+          <span>{{ link.label }}</span>
+          <Icon
+            name="material-symbols:arrow-right"
+            class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+          />
+        </NuxtLink>
+      </div>
     </div>
     <div class="pb-24 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-12">
       <div class="col-span-2">
