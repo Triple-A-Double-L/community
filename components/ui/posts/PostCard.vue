@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import type { BlogPost } from "~/types";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../card";
 import { Badge } from "../badge";
 
 interface Props {
@@ -11,8 +17,8 @@ const { data: post } = defineProps<Props>();
 </script>
 
 <template>
-  <NuxtLink :to="post._path">
-    <Card class="bg-transparent group flex flex-col">
+  <Card class="bg-transparent group flex flex-col" as-child>
+    <NuxtLink :to="post._path">
       <CardHeader class="flex-shrink-0">
         <div
           class="ring-1 ring-gray-200 dark:ring-gray-800 overflow-hidden aspect-[16/9] rounded-lg"
@@ -46,6 +52,6 @@ const { data: post } = defineProps<Props>();
           }}
         </p>
       </CardContent>
-    </Card>
-  </NuxtLink>
+    </NuxtLink>
+  </Card>
 </template>

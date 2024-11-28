@@ -78,19 +78,18 @@ const { data: surround } = await useAsyncData(
         {{ post?.description }}
       </div>
       <div v-if="post?.links && post.links.length > 0" class="flex mt-6 gap-4">
-        <NuxtLink
-          v-for="link in post.links"
-          :key="link.url"
-          :to="link.url"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 group"
-          :target="link.target"
+        <Button v-for="link in post.links" :key="link.url" as-child>
+          <NuxtLink
+            :to="link.url"
+            :target="link.target"
           >
-          <span>{{ link.label }}</span>
-          <Icon
-            name="material-symbols:arrow-right"
-            class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-          />
-        </NuxtLink>
+            <span>{{ link.label }}</span>
+            <Icon
+              name="material-symbols:arrow-right"
+              class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+            />
+          </NuxtLink>
+        </Button>
       </div>
     </div>
     <div class="pb-24 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-12">
@@ -101,10 +100,12 @@ const { data: surround } = await useAsyncData(
         />
         <Separator v-if="surround?.length" class="my-12" />
         <div class="grid gap-8 sm:grid-cols-2">
-          <NuxtLink v-if="surround[0] != null" :to="surround[0]._path">
-            <Card
-              class="bg-transparent dark:border-gray-800 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 group"
-            >
+          <Card
+            v-if="surround[0] != null"
+            class="bg-transparent dark:border-gray-800 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 group"
+            as-child
+          >
+            <NuxtLink :to="surround[0]._path">
               <CardContent class="p-6">
                 <div
                   class="inline-flex items-center rounded-full p-1.5 bg-gray-100 dark:bg-gray-800 group-hover:bg-primary/10 ring-1 ring-gray-300 dark:ring-gray-700 mb-4 group-hover:ring-primary/50"
@@ -123,14 +124,16 @@ const { data: surround } = await useAsyncData(
                   {{ surround[0].description }}
                 </p>
               </CardContent>
-            </Card>
-          </NuxtLink>
+            </NuxtLink>
+          </Card>
           <span v-else class="hidden sm:block">&nbsp;</span>
 
-          <NuxtLink v-if="surround[1] != null" :to="surround[1]._path">
-            <Card
-              class="bg-transparent dark:border-gray-800 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 group text-right"
-            >
+          <Card
+            v-if="surround[1] != null"
+            class="bg-transparent dark:border-gray-800 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 group text-right"
+            as-child
+          >
+            <NuxtLink as-child :to="surround[1]._path">
               <CardContent class="p-6">
                 <div
                   class="inline-flex items-center rounded-full p-1.5 bg-gray-100 dark:bg-gray-800 group-hover:bg-primary/10 ring-1 ring-gray-300 dark:ring-gray-700 mb-4 group-hover:ring-primary/50"
@@ -149,8 +152,8 @@ const { data: surround } = await useAsyncData(
                   {{ surround[1].description }}
                 </p>
               </CardContent>
-            </Card>
-          </NuxtLink>
+            </NuxtLink>
+          </Card>
           <span v-else class="hidden sm:block">&nbsp;</span>
         </div>
       </div>

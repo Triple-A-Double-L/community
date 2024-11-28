@@ -16,7 +16,15 @@ const colorMode = useColorMode();
         class="font-bold text-xl flex items-center gap-4 uppercase"
         to="/"
       >
-        <NuxtImg :src="colorMode.value === 'light' ? '/img/logo-light.svg' : '/img/logo-dark.svg'" height="48" width="48" />
+        <NuxtImg
+          :src="
+            colorMode.value === 'light'
+              ? '/img/logo-light.svg'
+              : '/img/logo-dark.svg'
+          "
+          height="48"
+          width="48"
+        />
         Community
       </NuxtLink>
       <div class="flex items-center gap-4">
@@ -24,17 +32,18 @@ const colorMode = useColorMode();
         <NuxtLink to="/about">About</NuxtLink>
         <NuxtLink to="/posts">Posts</NuxtLink>
         <ThemeSelector />
-        <Button
-          as="a"
-          href="https://github.com/mMichele03/triple-a-double-l"
-          target="_blank"
-          rel="noopener"
-        >
-          <Icon
-            name="mdi:github"
-            class="h-6 w-6 fill-gray-200 dark:fill-gray-800"
-          />
-          Github
+        <Button as-child>
+          <NuxtLink
+            to="https://github.com/mMichele03/triple-a-double-l"
+            target="_blank"
+            rel="noopener"
+          >
+            <Icon
+              name="mdi:github"
+              class="h-6 w-6 fill-gray-200 dark:fill-gray-800"
+            />
+            Github
+          </NuxtLink>
         </Button>
       </div>
     </div>

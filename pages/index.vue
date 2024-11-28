@@ -14,6 +14,11 @@ import AspectRatio from "~/components/ui/aspect-ratio/AspectRatio.vue";
       <p class="mt-6 text-lg tracking-tight text-gray-600 dark:text-gray-300">
         L'applicazione che semplifica
       </p>
+      <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3 justify-center">
+        <Button as-child size="lg">
+          <NuxtLink to="/">test</NuxtLink>
+        </Button>
+      </div>
     </PageSection>
     <PageSection>
       <AspectRatio :ratio="16/9" class="bg-gray-900/5 dark:bg-white/5 ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl lg:-m-4 p-4">
@@ -23,11 +28,6 @@ import AspectRatio from "~/components/ui/aspect-ratio/AspectRatio.vue";
           class="w-full h-full"
         />
       </AspectRatio>
-      <iframe
-        src=""
-        allowfullscreen
-        class="w-full h-full"
-      />
     </PageSection>
   </div>
 </template>
