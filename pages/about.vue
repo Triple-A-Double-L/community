@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { PageSection } from "~/components/layout";
-import PostCard from "~/components/ui/posts/PostCard.vue";
-import type { BlogPost } from "~/types";
+import MemberCard from "~/components/ui/member/MemberCard.vue";
+import type { Member } from "~/types";
 
-const { data: posts } = await useAsyncData("/posts", () =>
-  queryContent<BlogPost>('/posts').find()
+const { data: members } = await useAsyncData("/members", () =>
+  queryContent<Member>('/members').find()
 );
 </script>
 
@@ -16,20 +16,14 @@ const { data: posts } = await useAsyncData("/posts", () =>
       <h1
         class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight"
       >
-        Posts
+        About
       </h1>
       <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
         Collezioni di consegne
       </p>
     </div>
-    <div
-      class="mt-8 pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16"
-    >
-      <PostCard
-        v-for="post in posts"
-        :key="post.slug"
-        :data="post"
-      />
+    <div class="mt-8 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16">
+      <MemberCard v-for="member in members" :key="member.slug" :data="member" />
     </div>
   </PageSection>
 </template>

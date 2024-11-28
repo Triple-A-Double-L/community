@@ -9,3 +9,10 @@ export interface BlogPost extends ParsedContent {
   badge?: Badge
   links?: Link[]
 }
+
+export interface Member extends ParsedContent {
+  name: string
+  description: string
+  image?: HTMLImageElement
+  links?: Link[]
+}
