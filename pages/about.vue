@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PageSection } from "~/components/layout";
-import MemberCard from "~/components/ui/member/MemberCard.vue";
+import {MemberCard} from "~/components/ui/member";
 import type { Member } from "~/types";
 
 const { data: members } = await useAsyncData("/members", () =>
