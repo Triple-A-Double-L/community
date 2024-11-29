@@ -92,7 +92,7 @@ const { data: surround } = await useAsyncData(
         </Button>
       </div>
     </div>
-    <div class="pb-24 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-12">
+    <div class="pb-24 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-12 mt-6">
       <div class="col-span-2">
         <ContentRenderer
           :value="post ?? {}"
@@ -159,7 +159,7 @@ const { data: surround } = await useAsyncData(
       </div>
       <div>
         <div
-          class="lg:sticky lg:mt-6 top-24 px-4 sm:px-6 lg:px-4 lg:-mx-4 overflow-y-auto max-h-[calc(100vh-var(96px))]"
+          class="lg:sticky top-24 px-4 sm:px-6 lg:px-4 lg:-mx-4 overflow-y-auto max-h-[calc(100vh-var(96px))]"
         >
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Table of contents
