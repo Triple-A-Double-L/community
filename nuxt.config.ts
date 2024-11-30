@@ -18,6 +18,8 @@ export default defineNuxtConfig({
   ],
 
   app: {
+    baseURL: "/triple-a-double-l/",
+
     head: {
       link: [
         { rel: "icon", type: "image/x-icon", href: "/img/favicon-light.ico" },
@@ -33,6 +35,8 @@ export default defineNuxtConfig({
     prefix: "",
     componentDir: "./components/ui",
   },
+
+  robots: { robotsTxt: false },
 
   colorMode: {
     preference: "system",
