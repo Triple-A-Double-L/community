@@ -48,11 +48,10 @@ if (post.value.image?.src) {
 const { data: surround } = await useAsyncData(
   `${route.path}-surround`,
   () =>
-    queryContent("/posts")
-      .where({ _extension: "md" })
+    queryContent("posts")
       .without(["body", "excerpt"])
       .sort({ date: -1 })
-      .findSurround(withoutTrailingSlash(route.path)),
+      .findSurround(route.path),
   { default: () => [] }
 );
 </script>
@@ -79,10 +78,8 @@ const { data: surround } = await useAsyncData(
       </div>
       <div v-if="post?.links && post.links.length > 0" class="flex mt-6 gap-4">
         <Button v-for="link in post.links" :key="link.url" as-child>
-          <NuxtLink
-            :to="link.url"
-            :target="link.target"
-          >
+          <NuxtLink :to="link.url" :target="link.target" class="group">
+            <Icon :v-if="link.icon" :name="link.icon" class="w-5 h-5" />
             <span>{{ link.label }}</span>
             <Icon
               name="material-symbols:arrow-right"
@@ -92,7 +89,9 @@ const { data: surround } = await useAsyncData(
         </Button>
       </div>
     </div>
-    <div class="pb-24 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-12 mt-6">
+    <div
+      class="pb-24 flex flex-col-reverse lg:grid lg:grid-cols-3 lg:gap-12 mt-6"
+    >
       <div class="col-span-2">
         <ContentRenderer
           :value="post ?? {}"
