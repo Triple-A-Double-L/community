@@ -50,7 +50,7 @@ const { data: surround } = await useAsyncData(
   () =>
     queryContent("posts")
       .without(["body", "excerpt"])
-      .sort({ date: -1 })
+      .sort({ date: 1 })
       .findSurround(route.path),
   { default: () => [] }
 );
