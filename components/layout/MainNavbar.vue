@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { GITHUB_REPO_LINK } from "~/data/const";
 import { Button } from "../ui/button";
 import ThemeSelector from "../ui/common/ThemeSelector.vue";
 
@@ -34,7 +35,7 @@ const colorMode = useColorMode();
         <ThemeSelector />
         <Button as-child>
           <NuxtLink
-            to="https://github.com/mMichele03/triple-a-double-l"
+            :to="GITHUB_REPO_LINK"
             target="_blank"
             rel="noopener"
           >

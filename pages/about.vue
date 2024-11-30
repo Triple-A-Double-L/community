@@ -19,7 +19,7 @@ const { data: members } = await useAsyncData("/members", () =>
         About
       </h1>
       <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-        Collezioni di consegne
+        Conosci le menti che hanno dato vita a questo progetto. Il team "Triple A, Double L" è un gruppo di studenti di ingegneria informatica del Politecnico di Milano che per il corso di Foundation of Human Computer Interaction ha deciso di sviluppare un'applicazione che permetta ai cittadini di informarsi, segnalare e proporre miglioramenti per le città italiane.
       </p>
     </div>
     <div class="mt-8 pb-24 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16">

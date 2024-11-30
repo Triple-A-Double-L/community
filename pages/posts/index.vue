@@ -19,7 +19,7 @@ const { data: posts } = await useAsyncData("/posts", () =>
         Posts
       </h1>
       <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-        Collezioni di consegne
+        In questa sezione troverete una raccolta di riflessioni e analisi sui progetti sviluppati durante il corso di Foundation of Human Computer Interaction. Ogni post offre una panoramica dettagliata delle consegne, dalle prime fasi di ideazione fino alla realizzazione finale del nostro progetto.
       </p>
     </div>
     <div

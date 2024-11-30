@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { FIGMA_DESIGN_LINK, GITHUB_REPO_LINK } from '~/data/const';
+</script>
+
 <template>
   <footer class="border-t border-gray-200 dark:border-gray-800">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8 lg:py-16">
@@ -36,10 +40,19 @@
               <li>
                 <NuxtLink
                   class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                  to="https://github.com/mMichele03/triple-a-double-l"
+                  :to="GITHUB_REPO_LINK"
                   target="_blank"
                   rel="noopener"
                   >GitHub</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                  :to="FIGMA_DESIGN_LINK"
+                  target="_blank"
+                  rel="noopener"
+                  >Figma</NuxtLink
                 >
               </li>
             </ul>
