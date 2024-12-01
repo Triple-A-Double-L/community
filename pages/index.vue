@@ -44,7 +44,7 @@ import { FIGMA_DESIGN_LINK, GITHUB_REPO_LINK } from "~/data/const";
         </Button>
       </div>
     </PageSection>
-    <PageSection>
+    <PageSection class="pb-10">
       <AspectRatio :ratio="16/9" class="bg-gray-900/5 dark:bg-white/5 ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl lg:-m-4 p-4">
         <iframe
           src="https://embed.figma.com/proto/z16veuyvXmAGiqdTn3KbFT/Prototype?node-id=0-1&embed-host=share"
