@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "shadcn-nuxt",
+    "nuxt-toc",
   ],
 
   app: {
