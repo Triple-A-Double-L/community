@@ -38,9 +38,9 @@ const colorMode = useColorMode();
         Community
       </NuxtLink>
       <div class="hidden lg:flex items-center gap-4">
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
-        <NuxtLink to="/posts">Posts</NuxtLink>
+        <NuxtLink to="/" active-class="font-bold">Home</NuxtLink>
+        <NuxtLink to="/about" active-class="font-bold">About</NuxtLink>
+        <NuxtLink to="/posts" active-class="font-bold">Posts</NuxtLink>
         <ThemeSelector />
         <Button as-child>
           <NuxtLink :to="GITHUB_REPO_LINK" target="_blank" rel="noopener">
