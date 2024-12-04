@@ -157,6 +157,33 @@ const { data: surround } = await useAsyncData(
         </div>
       </div>
       <div>
+        <div class="block lg:hidden mb-8">
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+            Table of Content
+          </h2>
+          <ul class="mt-4 pl-4">
+            <li v-for="links in post?.body?.toc?.links">
+              <NuxtLink
+                :to="`#${links.id}`"
+                class=""
+                aria-current="page"
+              >
+              {{ links.text }}
+              </NuxtLink>
+              <ul class="pl-4" v-if="links.children">
+                <li v-for="child in links.children">
+                  <NuxtLink
+                    :to="`#${child.id}`"
+                    class=""
+                    aria-current="page"
+                  >
+                  {{ child.text }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
         <div
           class="hidden lg:block sticky top-24 px-4 overflow-y-auto max-h-[calc(100vh-var(96px))]"
         >
@@ -168,22 +195,22 @@ const { data: surround } = await useAsyncData(
 </template>
 <style>
 #toc-title {
-  @apply text-lg font-semibold text-gray-900 dark:text-white
+  @apply text-lg font-semibold text-gray-900 dark:text-white;
 }
 
 #toc-container {
-  @apply mt-2
+  @apply mt-2;
 }
 
 .toc-item {
-  @apply border-l-2 pl-4
+  @apply border-l-2 pl-4;
 }
 
 .active-toc-item {
-  @apply font-semibold border-gray-900 text-gray-900 dark:border-white dark:text-white
+  @apply font-semibold border-gray-900 text-gray-900 dark:border-white dark:text-white;
 }
 
 .toc-sublist-item {
-  @apply pl-8
+  @apply pl-8;
 }
 </style>
