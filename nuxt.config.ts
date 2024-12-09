@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   ],
 
   app: {
-    baseURL: "/triple-a-double-l/",
+    baseURL: "/community/",
 
     head: {
       link: [
