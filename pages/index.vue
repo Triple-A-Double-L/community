@@ -125,7 +125,7 @@ import { FIGMA_DESIGN_LINK, GITHUB_REPO_LINK } from "~/data/const";
       </div>
       <NuxtImg class="p-5" src="img/city.png" alt="image of a city" />
     </PageSection>
-    <PageSection class="py-24 sm:py-32 grid lg:grid-cols-2 items-center">
+    <PageSection class="py-24 sm:py-32 flex flex-col-reverse lg:grid lg:grid-cols-2 items-center">
       <NuxtImg class="p-5" src="img/comunity.png" alt="image of a city" />
       <div>
         <h2
