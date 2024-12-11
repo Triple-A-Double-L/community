@@ -12,12 +12,12 @@ const handleClick = () => {
   <Button variant="ghost" size="icon" @click="handleClick">
     <Icon
       v-if="colorMode.value == 'dark'"
-      name="material-symbols:light-mode-rounded"
+      name="iconamoon:mode-light-fill"
       class="h-5 w-5"
     />
     <Icon
       v-if="colorMode.value == 'light'"
-      name="material-symbols:dark-mode-rounded"
+      name="iconamoon:mode-dark-fill"
       class="h-5 w-5"
     />
   </Button>
