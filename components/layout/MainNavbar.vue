@@ -5,10 +5,8 @@ import ThemeSelector from "../ui/common/ThemeSelector.vue";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 
@@ -55,7 +53,7 @@ const colorMode = useColorMode();
       <div class="block lg:hidden">
         <ThemeSelector />
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger as-child>
             <Button size="icon" variant="ghost">
               <Icon
                 name="mdi:menu"
@@ -63,11 +61,19 @@ const colorMode = useColorMode();
               />
             </Button>
           </SheetTrigger>
-          <SheetContent class="w-full !max-w-none flex flex-col justify-between">
+          <SheetContent
+            class="w-full !max-w-none flex flex-col justify-between"
+          >
             <SheetHeader>
-              <NuxtLink to="/">Home</NuxtLink>
-              <NuxtLink to="/about">About</NuxtLink>
-              <NuxtLink to="/posts">Posts</NuxtLink>
+              <SheetClose as-child>
+                <NuxtLink class="text-lg" to="/">Home</NuxtLink>
+              </SheetClose>
+              <SheetClose as-child>
+                <NuxtLink class="text-lg" to="/about">About</NuxtLink>
+              </SheetClose>
+              <SheetClose as-child>
+                <NuxtLink class="text-lg" to="/posts">Posts</NuxtLink>
+              </SheetClose>
             </SheetHeader>
             <SheetFooter>
               <Button class="w-full" as-child>
