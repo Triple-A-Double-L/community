@@ -9,7 +9,7 @@ let iconName = "mingcute:earth-line";
 
 const iconMap: { [key: string]: string } = {
   github: "mdi:github",
-  linkedin: "mdi:linkedin",
+  linkedin: "devicon-plain:linkedin",
   twitter: "bi:twitter-x",
   facebook: "mdi:facebook",
   instagram: "mdi:instagram",

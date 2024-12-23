@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 
     head: {
       link: [
-        { rel: "icon", type: "image/x-icon", href: "/img/favicon-light.ico" },
+        { rel: "icon", type: "image/x-icon", href: "/community/img/favicon-light.ico" },
       ],
     },
   },
