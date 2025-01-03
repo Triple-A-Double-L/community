@@ -25,11 +25,14 @@ const colorMode = useColorMode();
         to="/"
       >
         <NuxtImg
-          :src="
-            colorMode.value === 'light'
-              ? '/img/logo-light.webp'
-              : '/img/logo-dark.webp'
-          "
+          :v-if="colorMode.value === 'light'"
+          src="/img/logo-light.webp"
+          height="48"
+          width="48"
+        />
+        <NuxtImg
+          :v-if="colorMode.value !== 'light'"
+          src="/img/logo-dark.webp"
           height="48"
           width="48"
         />
