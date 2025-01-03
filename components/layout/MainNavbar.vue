@@ -12,8 +12,6 @@ import {
 import { WebsiteLogo } from "../ui/common";
 
 const colorMode = useColorMode();
-
-console.log(colorMode);
 </script>
 
 <template>
