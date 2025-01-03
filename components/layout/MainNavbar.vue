@@ -9,8 +9,11 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { WebsiteLogo } from "../ui/common";
 
 const colorMode = useColorMode();
+
+console.log(colorMode);
 </script>
 
 <template>
@@ -24,18 +27,7 @@ const colorMode = useColorMode();
         class="font-bold text-xl flex items-center gap-4 uppercase"
         to="/"
       >
-        <NuxtImg
-          :v-if="colorMode.value === 'light'"
-          src="/img/logo-light.webp"
-          height="48"
-          width="48"
-        />
-        <NuxtImg
-          :v-if="colorMode.value !== 'light'"
-          src="/img/logo-dark.webp"
-          height="48"
-          width="48"
-        />
+        <WebsiteLogo class="w-12 h-12 dark:fill-white fill-black" />
         Community
       </NuxtLink>
       <div class="hidden lg:flex items-center gap-4">
