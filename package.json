@@ -11,6 +11,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/bi": "^1.2.2",
+    "@iconify-json/iconamoon": "^1.2.2",
+    "@iconify-json/mdi": "^1.2.2",
     "@radix-icons/vue": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
