@@ -27,8 +27,8 @@ const colorMode = useColorMode();
         <NuxtImg
           :src="
             colorMode.value === 'light'
-              ? '/img/logo-light.svg'
-              : '/img/logo-dark.svg'
+              ? '/img/logo-light.webp'
+              : '/img/logo-dark.webp'
           "
           height="48"
           width="48"

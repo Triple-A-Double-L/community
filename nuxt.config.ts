@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    format: ["webp", "svg"],
+    format: ["webp"],
   },
 
   shadcn: {
